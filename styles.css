@@ -1,0 +1,290 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #ff5f6d, #ffc371);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #1f1f1f;
+    padding: 60px 0;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    color: #ffcc00;
+}
+
+.profile-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #34e89e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Links */
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    background-color: #5d26c1;
+    border-radius: 50px;
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a i {
+    margin-right: 10px; /* Spacing between the icon and text */
+}
+
+.social-links a:hover {
+    background-color: #34e89e;
+    transform: scale(1.05);
+}
+
+.social-links a i.fab, .social-links a i.fas {
+    font-size: 20px; /* Icon size */
+}
+
+
+/* Section Styling */
+.section {
+    padding: 60px 30px;
+    text-align: center;
+    background-color: #ffffff;
+    margin: 30px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-10px);
+}
+
+.section h2 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #34e89e;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section p, .section ul {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Work Experience Section */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.experience-box {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-box h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.experience-box .date {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.experience-box p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.experience-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+    .experience-box {
+        width: 90%;
+    }
+}
+
+/* Educational Background Styling */
+#education ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#education li {
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 8px solid #5d26c1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#education h3 {
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+#education p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Projects Section */
+.project-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(to bottom right, #11a9cb87, #2574fca0);
+    color: #fff;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #060501;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hobbies and Achievements */
+/* Hobbies Section */
+.hobbies-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hobby-item {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-item p {
+    font-size: 22px;
+    color: #444;
+}
+
+.hobby-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .hobby-item {
+        width: 80%;
+    }
+}
+
+ul {
+    list-style-type: square;
+    font-size: 20px;
+    color: #555;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 18px;
+    color: #ffcc00;
+}
+
+footer p:hover {
+    color: #34e89e;
+    transition: color 0.3s ease;
+}
